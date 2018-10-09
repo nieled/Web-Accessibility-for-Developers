@@ -74,7 +74,7 @@
         <br style="clear:both;">
         <a id="top"></a>
 
-        <div class="profile" role="main">
+        <div class="profile" role="main" aria-label="main content">
           <h2>Join our community</h2>
           <div id="feedback">&nbsp;</div>
           <form id="join_form">
@@ -95,7 +95,7 @@
                 <img src="images/required.gif" alt="Required Field" />
               </dt>
               <dd>
-                <input type="text" name="password" size="20" id="password" value="" class="input" /><br />
+                <input type="text" name="password" size="20" id="password" value="" class="input" aria-required="true" aria-describedby="password_error"/><br />
                 <span id="password_error">&nbsp;</span>
               </dd>
               <dt>
@@ -103,7 +103,7 @@
                 <img src="images/required.gif" class="img" />
               </dt>
               <dd>
-                <input type="text" name="email" size="30" id="email" value="" class="input" /><br />
+                <input type="text" name="email" size="30" id="email" value="" class="input" aria-required="true" aria-describedby="email_error" /><br />
                 <span id="email_error">&nbsp;</span>
               </dd>
               <dt>
