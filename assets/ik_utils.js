@@ -8,7 +8,9 @@ ik_utils.keys =  {
 	'left': 37,
 	'up': 38,
 	'right': 39,
-	'down':  40
+	'down':  40,
+	'end': 35,
+	'home': 36
 }
 ik_utils.getTransitionEventName = function(){
 	var $elem, events, t, name;
