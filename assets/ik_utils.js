@@ -9,6 +9,8 @@ ik_utils.keys =  {
 	'up': 38,
 	'right': 39,
 	'down':  40,
+	'pageUp': 33,
+	'pageDown': 34,
 	'end': 35,
 	'home': 36
 }

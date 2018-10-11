@@ -2,7 +2,7 @@
 
 	var pluginName = 'ik_slider',
 		defaults = {
-			'instructions': 'Use the right and left arrow keys to increase or decrease the slider value. ',
+			'instructions': 'Use the right and left arrow keys to increase or decrease the slider value. Use Page Up or Page Down to increment or decrement by a larger amount. Home and End keys to set the slider value at the start or end allowed values.',
 			'minValue': 0,
 			'maxValue': 100,
 			'nowValue': 0,
@@ -205,7 +205,7 @@
 		plugin.setValue(plugin.options.nowValue);
 
 	};
-	
+
 	/**
 	* Keyboard event handler.
 	*
@@ -234,6 +234,16 @@
 				break;
 			case ik_utils.keys.home:
 				plugin.setValue(plugin.options.minValue);
+				break;
+			case ik_utils.keys.pageUp:
+				value = parseInt($elem.attr('aria-valuenow')) + plugin.options.step * 2;
+				value = value < plugin.options.maxValue ? value : plugin.options.maxValue;
+				plugin.setValue(value);
+				break;
+			case ik_utils.keys.pageDown:
+				value = parseInt($elem.attr('aria-valuenow')) - plugin.options.step * 2;
+				value = value > plugin.options.minValue ? value : plugin.options.minValue
+				plugin.setValue(value);
 				break;
 		}
 	};
