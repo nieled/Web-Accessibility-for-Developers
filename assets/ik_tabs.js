@@ -64,7 +64,7 @@
 					'aria-controls': 'panel' + i // define which panel it controls
 				})
 					.text(lbl > '' ? lbl : 'Tab ' + (i + 1))
-					.on('keydown', {'plugin': plugin, 'index': i}, plugin.onKeyDown) // add keyboard event handler
+					.on('keydown', { 'plugin': plugin, 'index': i }, plugin.onKeyDown) // add keyboard event handler
 					.on('click', { 'plugin': plugin, 'index': i }, plugin.selectTab) // add mouse event handler
 					.appendTo($tabbar);
 			});
@@ -111,7 +111,8 @@
 			.attr({
 				'aria-selected': true,
 				'tabindex': 0
-			});
+			})
+			.focus();
 
 		if (event.type) $($tabs[ind]).focus(); // move focus to current tab if reached by mouse or keyboard
 
